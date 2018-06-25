@@ -93,7 +93,7 @@ footer {
   font-size: 14px;
 }
 
-.page-box p {
+.page-box .btn {
   cursor: pointer;    
   display: inline-block;
   width: 191px;

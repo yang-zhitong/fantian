@@ -57,6 +57,8 @@ var articleIndex = Number(window.location.href.split("index=")[1]) || 0;
 // });
 
 function newsRender() {
+  if (!articles[articleIndex].alt1) articles[articleIndex].alt1 = '';
+  if (!articles[articleIndex].alt2) articles[articleIndex].alt2 = '';
   $(".content").html(temp(articles[articleIndex]));
   var len = articles.length,
     last = (articleIndex - 1 + len) % len,
@@ -84,7 +86,12 @@ const ajaxLoad = [{
     name: "footer",
     template: require("./src/footer.ejs"),
     url: "http://xiftkj.fantiankeji.com/fantistic/index.php/Home/index/companys"
-  }
+  },
+  {
+    name: "partner",
+    template: require("./src/partner.ejs"),
+    url: "http://xiftkj.fantiankeji.com/fantistic/index.php/Home/index/enterprise"
+  },
 ];
 
 const navTemplate = require("./src/nav.ejs");
@@ -98,7 +105,14 @@ const hookClass = {
   footer: function (temp, data) {
     $(".J_footerInfo").html(temp(data));
     $(".J_profileContent").text(data.data[0].content); // 公司简介单独拿出来的
-  }
+    $('.J_weibo').appendTo('.J_footerInfo .three-way');
+  },
+  partner: function (temp, data) {
+    var flatarr = data.data.reduce(function(total, cur, index) {
+      return total.concat(cur);
+    }, []);
+    $(".J_partner").html(temp({data: flatarr}));
+  },
 };
 
 function renderInOrder(index) {

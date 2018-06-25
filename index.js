@@ -81,11 +81,6 @@ const ajaxLoad = [{
     url: "http://xiftkj.fantiankeji.com/fantistic/index.php/Home/index/cases"
   },
   {
-    name: "partner",
-    template: require("./src/partner.ejs"),
-    url: "http://xiftkj.fantiankeji.com/fantistic/index.php/Home/index/enterprise"
-  },
-  {
     name: "news",
     template: require("./src/news.ejs"),
     url: "http://xiftkj.fantiankeji.com/fantistic/index.php/Home/index/news"
@@ -94,7 +89,12 @@ const ajaxLoad = [{
     name: "footer",
     template: require("./src/footer.ejs"),
     url: "http://xiftkj.fantiankeji.com/fantistic/index.php/Home/index/companys"
-  }
+  },
+  {
+    name: "partner",
+    template: require("./src/partner.ejs"),
+    url: "http://xiftkj.fantiankeji.com/fantistic/index.php/Home/index/enterprise"
+  },
 ];
 
 const hookClass = {
@@ -117,24 +117,6 @@ const hookClass = {
     $(".J_slideThumbnails").html(temp(data));
     commuEvent();
   },
-  partner: function (temp, data) {
-    // $(".J_partner")
-    //   .html(temp(data))
-    //   .find('.J_partnersSlide')
-    //   .unslider({
-    //     animation: "fade",
-    //     arrows: {
-    //       prev: '<a class="unslider-arrow prev">&lt;</a>',
-    //       next: '<a class="unslider-arrow next">&gt;</a>'
-    //     }
-    //   });
-    // var $logos = $(".J_logo");
-    // $logos.each(function () {
-    //   var $this = $(this),
-    //     url = $.trim($this.data("url"));
-    //   if (url) $this.attr("href", url);
-    // });
-  },
   news: function (temp, data) {
     $(".J_showNews").html(temp(data));
     $('.J_flip').hover(function () {
@@ -146,7 +128,14 @@ const hookClass = {
   footer: function (temp, data) {
     $(".J_footerInfo").html(temp(data));
     $(".J_profileContent").text(data.data[0].content); // 公司简介单独拿出来的
-  }
+    $('.J_weibo').appendTo('.J_footerInfo .three-way');
+  },
+  partner: function (temp, data) {
+    var flatarr = data.data.reduce(function(total, cur, index) {
+      return total.concat(cur);
+    }, []);
+    $(".J_partner").html(temp({data: flatarr}));
+  },
 };
 
 function renderInOrder(index) {
@@ -256,40 +245,6 @@ function commuEvent() {
     '" allowFullScreen="true" quality="high" width="100%" height="100%" align="middle" allowScriptAccess="always"type="application/x-shockwave-flash" />';
 
     $Jslide.find('.slide-pics').html('').append($(embedHtml));
-
-    // $Jslide
-    //   .fadeOut(function () {
-    //     $Jslide.html(
-    //       '<div class="slide-pics "><ul class="pics-wrap"></ul></div>'
-    //     );
-    //     picSlide(parentIndex, childIndex);
-    //   })
-    //   .fadeIn();
-
-    // $clone.appendTo($figure.parent()).animate(
-    //   {
-    //     top: "-340px",
-    //     left: "-80px",
-    //     opcatity: 0.4
-    //   },
-    //   function() {
-    //     $clone.remove();
-    //     fadeText(parentIndex, childIndex);
-    //     picSlide(parentIndex, childIndex);
-    //     // $(".pics-wrap")
-    //     //   .html('<img src="' + src + '">')
-    //     //   .addClass("scale")
-    //     //   .animate({
-    //     //       width: "100%",
-    //     //       height: "100%"
-    //     //     },
-    //     //     1000,
-    //     //     function () {
-    //     //       picSlide(parentIndex, childIndex);
-    //     //     }
-    //     //   );
-    // }
-    // );
   });
 
   // 触发

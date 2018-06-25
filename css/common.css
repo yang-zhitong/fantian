@@ -226,8 +226,8 @@ img[src=""] {
   position: relative;
   overflow: hidden;
   height: 30px;
-  min-width: 76px;
-  max-width: 222px;
+  min-width: 226px;
+  max-width: 242px;
   display: inline-block;
   vertical-align: middle;
 }
@@ -298,6 +298,32 @@ footer {
   z-index: 1;
 }
 
+footer .partner-link{
+  padding-top: 40px;
+}
+
+footer .link-title {
+  display: inline-block;
+  vertical-align: top;
+  font-size: 18px;
+  color: #fff;
+  margin-right: 10px;
+}
+
+footer .link-box {
+  display: inline-block;
+  width: 980px;
+}
+
+footer .link-box a {
+  margin-right: 30px;
+  font-size: 16px;
+  color: #5d5a9f;
+  line-height: 21px;
+  margin-bottom: 14px;
+  display: inline-block;
+}
+
 footer .en-text {
   background-position: -0px -0px;
   height: 32px;
@@ -316,6 +342,9 @@ footer .three-way .hide-btn {
   position: absolute;
   left: 0;
   opacity: 0;
+  width: 32px;
+  height: 40px;
+  cursor: pointer;
 }
 
 footer .en-text,
@@ -394,7 +423,7 @@ footer .company-info .line1 {
 footer .copyright {
   font-size: 12px;
   text-align: center;
-  margin-top: 82px;
+  margin-top: 32px;
   color: #5d5a9f;
 }
 
