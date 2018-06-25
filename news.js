@@ -68,14 +68,16 @@ function newsRender() {
   $(".J_pageBox").html(tmpHtml);
 }
 
-var img = new Image();
-img.onload = function () {
-  $(".J_content").css({
-    'backgroundImage': 'url("' + img.src + '")'
-  }).fadeIn(2000);
-};
-img.src = require('./images/new_content_bg_min.png');
 
+// var img = new Image();
+// img.onload = function () {
+//   $(".J_content").css({
+//     'backgroundImage': 'url("' + img.src + '")'
+//   }).fadeIn(2000);
+// };
+// img.src = require('./images/new_content_bg_min.png');
+
+  $(".J_content").fadeIn(2000);
 
 const ajaxLoad = [{
     name: "content",

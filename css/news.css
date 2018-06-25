@@ -27,6 +27,7 @@
   background-position: center;
   background-repeat: no-repeat;
   display: none;
+  background-image: url("../images/new_content_bg_min.png");
 }
 
 .topic {

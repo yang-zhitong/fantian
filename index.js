@@ -310,10 +310,11 @@ const imgsArr = [
     selector: "hand",
     url: require("./images/images/hand_sprite.png"),
     callback: function () {
-      $(".hand").removeClass("far");
     }
   }]
 ];
+
+$(".hand").removeClass("far");
 
 function imgsArrLoop(parentIndex) {
   if (!imgsArr[parentIndex]) return false;
@@ -334,4 +335,4 @@ function imgsArrLoop(parentIndex) {
   });
 }
 
-imgsArrLoop(0);
+// imgsArrLoop(0);
