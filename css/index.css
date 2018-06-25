@@ -1,0 +1,22 @@
+footer {
+  margin: 230px auto 0 auto;
+  padding-bottom: 0;
+}
+
+.big-bg {
+  background-repeat: no-repeat;
+  background-position: center top;
+  height: 2000px;
+  width: 100%;
+  position: relative;
+}
+
+.big-bg.bg1 {
+  background-image: url(http://fantistic.oss-cn-shanghai.aliyuncs.com/pic/index_big_bg1.jpg);  
+}
+.big-bg.bg2 {
+  background-image: url(../images/images/index_big_bg2.jpg);  
+}
+.big-bg.bg3 {
+  background-image: url(../images/images/index_big_bg3.jpg);  
+}

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+  <!-- 用在360中 -->
+  <meta name="renderer" content="webkit">
+  <!-- 用在其它 -->
+  <meta name="force-rendering" content="webkit">
+  <!-- 针对 IE 浏览器 -->
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <!-- 针对百度搜索 -->
+  <meta http-equiv="Cache-Control" content="no-transform">
+
+  <title>梵天数字科技有限公司</title>
+  <meta name="description" content="深圳梵天数字科技有限公司">
+  <meta name="keywords" content="深圳梵天数字科技有限公司, 西安市西港雅苑">
+  <script>
+    var types = {
+      0: 'vr.html',
+      1: 'robot.html',
+    };
+    function getParameterByName(name, url) {
+      if (!url) url = window.location.href;
+      name = name.replace(/[\[\]]/g, "\\$&");
+      var regex = new RegExp("[?&]" + name + "(=([^&#]*)|&|#|$)"),
+        results = regex.exec(url);
+      if (!results) return null;
+      if (!results[2]) return '';
+      return decodeURIComponent(results[2].replace(/\+/g, " "));
+    }
+    window.location.href = types[getParameterByName('type')] || 'vr.html';
+  </script>
+</head>
+
+<body>
+</body>
+
+</html>

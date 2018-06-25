@@ -1,0 +1,42 @@
+<div class="new-left J_flip">
+  <a href="news.html?index=0" class="">
+    <div class="news-img-box animated"> 
+      <div class="new-bg" style="background-image:url(<%= data[0].thumbnail %>)"></div>
+      <div class="new-border"></div>
+    </div>
+    <div class="new-readmore"></div>
+  </a>
+  <div class="new-summary">
+    <p class="time">
+      <%= timeFormat(data[0].t) %>
+    </p>
+    <p class="line"></p>
+    <p class="new-title">
+      <%= data[0].title %>
+    </p>
+    <p class="preview">
+      <%= data[0].description.slice(0, 50) + '...' %>
+    </p>
+  </div>
+</div>
+<div class="new-right J_flip">
+  <a href="news.html?index=1" class="">
+    <div class="news-img-box animated">
+      <div class="new-bg" style="background-image:url(<%= data[1].thumbnail %>)"></div>    
+      <div class="new-border"></div>
+    </div>
+    <div class="new-readmore"></div>
+  </a>
+  <div class="new-summary">
+    <p class="time">
+      <%= timeFormat(data[1].t) %>
+    </p>
+    <p class="line"></p>
+    <p class="new-title">
+      <%= data[1].title %>
+    </p>
+    <p class="preview">
+      <%= data[1].description.slice(0, 50) + '...' %>
+    </p>
+  </div>
+</div>

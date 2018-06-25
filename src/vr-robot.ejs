@@ -1,0 +1,28 @@
+<div class="content-wrap illu">
+  <div class="title">
+    <div class="fz sprite title-blue">
+      <%= data.english1 || 'INTELLIGENT TECHNOLOGY' %>
+      <p class="ch"><%= data.name1 %></p>
+    </div>
+  </div>
+  <div class="intro">
+     <%= data.content1 %>
+  </div>
+</div>
+
+<div class="content-wrap phone">
+  <div class="title">
+    <div class="fz sprite title-blue">
+      <%= data.english2 || 'INTELLIGENT TECHNOLOGY' %>
+      <p class="ch"><%= data.name2 %></p>
+    </div>
+  </div>
+  <div class="intro">
+    <%= data.content2 %>
+  </div>
+  <div class="phone-video">
+    <div class="video-box J_video">
+      <embed  src="<%= data.view %>" allowFullScreen="true" quality="high" width="100%" height="479px" align="middle" allowScriptAccess="always"type="application/x-shockwave-flash" />
+    </div>
+  </div>
+</div>

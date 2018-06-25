@@ -1,0 +1,11 @@
+<% data.forEach(function (it, index) { %>
+  <li class="video v<%= index + 1 %>">
+    <img class="img" alt="<% it.seotitle %>" src="<%= it.picone %>">
+    <p class="text">
+      <%= it.title %>
+    </p>
+    <p class="sub-text">
+      <%= it.english %>
+    </p>
+  </li>
+<% }) %>

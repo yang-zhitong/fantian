@@ -1,0 +1,287 @@
+.partner-company {
+  margin-top: 90px;
+  height: 600px;
+}
+.partner-company .unslider {
+  overflow: visible;
+}
+.partner-company .unslider,
+.partner-company .unslider-fade,
+.partner-company .one-p {
+  height: 100%;
+  width: 100%;
+}
+
+
+.partner-company .unslider-arrow {
+  width: 75px;
+  height: 266px;
+  position: absolute;
+  background-color: #191138;
+  background-color: rgba(25,17,56,.6);
+  font-size: 110px;
+  line-height: 253px;
+  font-weight: 200;
+  color: #181648;
+}
+
+.partner-company .unslider-arrow.next {
+  right: -29px;
+  top: 279px;
+}
+
+.partner-company .unslider-arrow.prev {
+  left: -44px;
+  top: 279px;
+}
+
+.partner-company .partners {
+  height: 370px;
+  width: 988px;
+  margin: 81px auto 0 auto;
+  background-image: url(../images/images/friend_com.png);
+  background-repeat: no-repeat;
+  background-position: center top;
+}
+
+.partner-company .partner-logo {
+  width: 117px;
+  height: 133px;
+  position: absolute;
+  overflow: hidden;
+  display: none;
+}
+
+.one-p.unslider-active .partner-logo{
+  display: block;
+}
+
+.partner-company .partner-logo img {
+  width: 100%;
+  height: 100%;
+}
+
+.partner-company .logo1 {
+  left: 127px;
+  top: 112px;
+}
+
+.partner-company .logo2 {
+  left: 312px;
+  top: 216px;
+}
+
+.partner-company .logo3 {
+  left: 497px;
+  top: 112px;
+}
+
+.partner-company .logo4 {
+  left: 682px;
+  top: 216px;
+}
+
+.news {
+  margin-top: 93px;
+  height: 493px;
+}
+
+.news .show-news {
+  margin-top: 83px;
+}
+
+.news .new-left,
+.news .new-right {
+  height: 300px;
+  position: relative;
+  display: inline-block;
+}
+
+.news .img {
+  position: absolute;
+}
+
+.news .new-left {
+  margin-right: 20px;
+  width: 580px;
+}
+
+.news .new-left .img {
+  right: 0;
+}
+
+.news .new-right {
+  width: 580px;  
+}
+
+.news .new-right .img {
+  left: 0;
+}
+
+.news .news-img-box {
+  position: absolute;
+  height: 160px;
+  width: 100%;
+}
+
+.news .news-img-box .new-bg {
+  position: absolute;
+  height: 160px;
+  width: 100%;
+  background: url(../images/l_newimg.jpg) no-repeat 0 0;
+}  
+.news .new-left .new-border{
+  position: absolute;
+  top: 11px;
+  left: 11px;
+  width: 556px;
+  height: 166px;
+  background: url(../images/l_boder.png) no-repeat 0 0;
+}
+
+.news .new-right .new-border{
+  position: absolute;
+  top: 11px;
+  left: 11px;
+  width: 556px;
+  height: 166px;
+  background: url(../images/r_boder.png) no-repeat 0 0;
+}
+
+.news .new-left .new-readmore {
+  position: absolute;
+  top: 104px;
+  left: -67px;
+  width: 556px;
+  height: 166px;
+  background: url(../images/l_read.png) no-repeat 0 0;
+}
+
+.news .new-right .new-readmore {
+  position: absolute;
+  top: 104px;
+  right: -67px;
+  width: 133px;
+  height: 45px;
+  background: url(../images/r_read.png) no-repeat 0 0;
+}
+
+.news .new-summary {
+  margin-top: 216px;
+  color: #7d81b9;
+  font-size: 12px;
+}
+
+.news .new-summary p {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.news .new-summary .time {
+  margin-left: -5px;
+}
+
+.news .new-summary .line {
+  margin-left: 18px;
+  margin-right: 35px;
+  width: 40px;
+  height: 1px;
+  background-color: #7d81b9;
+}
+
+.news .new-summary .new-title {
+  font-size: 16px;
+}
+
+.news .new-summary .preview {
+  margin-top: 23px;
+  line-height: 22px;
+  margin-left: 161px;
+}
+
+.profile {
+  margin-top: 213px;
+  height: 688px;
+}
+
+.profile .picture {
+  margin-top: 81px;
+  height: 497px;
+  position: relative;
+}
+
+.profile .picture .text {
+  position: absolute;
+  top: 407px;
+  left: 420px;
+  font-size: 14px;
+  line-height: 24px;
+  color: #fff;
+  width: 687px;
+  text-align: center;
+  height: 70px;
+  overflow: hidden;
+}
+
+.animated {
+  animation-duration: 1s;
+  animation-fill-mode: both;
+}
+
+.logo-hover:hover > img {
+  animation-name: flipInY;  
+}
+
+.rotateIn {
+  animation-name: flipInY;
+}
+
+@keyframes flipInY {
+  from {
+    transform: rotateY(0deg);    
+  }
+
+  to {
+    transform: rotateY(360deg);
+  }
+}
+
+@keyframes flipInX {
+  from {
+    -webkit-transform: perspective(400px) rotate3d(1, 0, 0, 90deg);
+    transform: perspective(400px) rotate3d(1, 0, 0, 90deg);
+    -webkit-animation-timing-function: ease-in;
+    animation-timing-function: ease-in;
+    opacity: 0;
+  }
+
+  40% {
+    -webkit-transform: perspective(400px) rotate3d(1, 0, 0, -20deg);
+    transform: perspective(400px) rotate3d(1, 0, 0, -20deg);
+    -webkit-animation-timing-function: ease-in;
+    animation-timing-function: ease-in;
+  }
+
+  60% {
+    -webkit-transform: perspective(400px) rotate3d(1, 0, 0, 10deg);
+    transform: perspective(400px) rotate3d(1, 0, 0, 10deg);
+    opacity: 1;
+  }
+
+  80% {
+    -webkit-transform: perspective(400px) rotate3d(1, 0, 0, -5deg);
+    transform: perspective(400px) rotate3d(1, 0, 0, -5deg);
+  }
+
+  to {
+    -webkit-transform: perspective(400px);
+    transform: perspective(400px);
+  }
+}
+
+.flipInX {
+  -webkit-backface-visibility: visible !important;
+  backface-visibility: visible !important;
+  -webkit-animation-name: flipInX;
+  animation-name: flipInX;
+}

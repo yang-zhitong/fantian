@@ -1,0 +1,459 @@
+/*网页基本样式*/
+
+/* 清除内外边距 */
+
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+hr,
+p,
+blockquote,
+dl,
+dt,
+dd,
+ul,
+ol,
+li,
+pre,
+fieldset,
+legend,
+button,
+input,
+textarea,
+th,
+td {
+  margin: 0;
+  padding: 0;
+}
+
+body,
+button,
+input,
+select,
+textarea {
+  /* for ie */
+  /*font: 12px/1 Tahoma, Helvetica, Arial, "宋体", sans-serif;*/
+  font: 12px/1 Microsoft YaHei, "\5b8b\4f53", Tahoma, Helvetica, Arial, sans-serif;
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+/* 重置文本格式元素 */
+
+a {
+  text-decoration: none;
+  outline: none;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+/* 重置 hr */
+
+hr {
+  border: none;
+  height: 1px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: normal;
+}
+
+em {
+  font-style: normal;
+}
+
+/* 让非ie浏览器默认也显示垂直滚动条，防止因滚动条引起的闪烁 */
+
+html {
+  overflow-y: scroll;
+}
+
+fieldset,
+img {
+  border: none;
+  vertical-align: top;
+}
+
+body {
+  overflow-x: hidden;
+  min-width: 1200px;
+  position: relative;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.content-wrap {
+  width: 1200px;
+  position: relative;
+}
+
+.width-1200 {
+  z-index: 10;
+  width: 1200px;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  margin: 0 auto;
+}
+
+img[src=""] {
+  opacity: 0;
+}
+
+.fz {
+  font-family: "FZLanTingHei-R-GBK", "Myriad Pro", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+}
+
+.pf {
+  font-family: "PingFang SC", "Myriad Pro", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+}
+
+.sprite.title-green {
+  height: 111px;
+  width: 69px;
+  background-position: -0px -0px;
+}
+
+.sprite.title-purple {
+  height: 111px;
+  width: 69px;
+  background-position: -0px -111px;
+}
+
+.sprite.title-blue {
+  height: 111px;
+  width: 69px;
+  background-position: -0px -222px;
+}
+
+.sprite.title-green {
+  height: 111px;
+  width: 69px;
+  background-position: -0px -333px;
+}
+
+.sprite.title-orange {
+  height: 111px;
+  width: 69px;
+  background-position: -0px -503px;
+}
+
+.sprite.arrow-left {
+  height: 23px;
+  width: 21px;
+  background-position: -0px -444px;
+}
+
+.sprite.arrow-right {
+  height: 23px;
+  width: 21px;
+  background-position: -0px -480px;
+}
+
+.sprite {
+  background-image: url(../images/title_sprite.png);
+  display: inline-block;
+}
+
+.title {
+  text-align: center;
+  line-height: 22px;
+  color: #fff;
+}
+
+.title .sprite {
+  height: 110px;
+  padding-top: 39px;
+  white-space: nowrap;
+  font-size: 13px;
+  letter-spacing: 1.5px;
+  text-align: center;
+  background-position-x: center;
+  background-repeat: no-repeat;
+  width: auto;
+  color: #a6a6ac;
+}
+
+.title .ch {
+  font-size: 16px;
+  color: #fff;
+}
+
+.nav {
+  position: fixed;
+  width: 116px;
+  white-space: nowrap;
+  height: 438px;
+  padding-top: 63px;
+  padding-left: 12px;
+  background: url(../images/nav_bg.png) no-repeat 0 0;
+  top: 47px;
+  z-index: 100;
+}
+
+.nav-a {
+  color: #fff;
+  height: 34px;
+  line-height: 34px;
+  display: block;
+  text-transform: uppercase;
+}
+
+.nav-a:before {
+  content: "-";
+  color: #fff;
+  margin-right: 30px;
+}
+
+.nav-a .ov-box {
+  position: relative;
+  overflow: hidden;
+  height: 30px;
+  min-width: 76px;
+  max-width: 222px;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.nav-a p {
+  position: absolute;
+  line-height: 16px;
+  height: 16px;
+  transition: all 0.5s ease;
+}
+
+.nav-a .en {
+  top: 8px;
+}
+
+.nav-a .cn {
+  font-size: 16px;
+  left: -80px;
+  top: 0;
+}
+
+.nav-a.current .en,
+.nav-a:hover .en {
+  top: 16px;
+}
+
+.nav-a.current .cn,
+.nav-a:hover .cn {
+  top: 0px;
+  left: 0;
+}
+
+/* .nav-a .en {
+  opacity: 1;
+}
+
+.nav-a:hover > .en,
+.nav-a.current > .en {
+  opacity: 0;
+}
+
+.nav-a .cn {
+  opacity: 0;
+  left: 25px;
+  position: absolute;
+  font-size: 20px;
+  font-weight: 600;
+}  
+
+.nav-a:hover > .cn,
+.nav-a.current > .cn {
+  opacity: 1;  
+} */
+
+.right-logo {
+  position: absolute;
+  left: 40px;
+  width: 194px;
+  height: 37px;
+  top: -23px;
+}
+
+footer {
+  width: 1200px;
+  height: 309px;
+  padding-bottom: 75px;
+  position: relative;
+  z-index: 1;
+}
+
+footer .en-text {
+  background-position: -0px -0px;
+  height: 32px;
+  width: 114px;
+}
+
+footer .three-way {
+  margin-top: 94px;
+  background-position: -114px -0px;
+  height: 32px;
+  width: 121px;
+  position: relative;
+}
+
+footer .three-way .hide-btn {
+  position: absolute;
+  left: 0;
+  opacity: 0;
+}
+
+footer .en-text,
+footer .qrocde,
+footer .three-way {
+  background-image: url(../images/footer_sprite.png);
+}
+
+footer .three-way a {
+  float: left;
+  display: block;
+  padding: 16px;
+  margin-right: 12px;
+}
+
+footer .three-way .qq {
+  margin-right: 0;
+}
+
+footer .contact {
+  width: 114px;
+  height: 181px;
+  display: inline-block;
+  vertical-align: middle;
+  margin-left: -2px;
+}
+
+footer .contact .text {
+  font-size: 24px;
+  color: #fff;
+  margin-top: 8px;
+  margin-bottom: 24px;
+}
+
+footer .qrocde {
+  width: 90px;
+  height: 90px;
+  background-position: 0 -42px;
+}
+
+footer .sub,
+footer .company-info {
+  display: inline-block;
+  vertical-align: middle;
+  height: 154px;
+  font-size: 18px;
+  color: #fff;
+}
+
+footer .sub {
+  margin-left: 194px;
+}
+
+footer .company-info {
+  margin-left: 99px;
+  max-width: 650px;
+}
+
+footer .company-info .line {
+  margin: 20px 0;
+  font-size: 16px;
+  height: 16px;
+  color: #5d5a9f;
+  white-space: nowrap;
+}
+
+footer .company-info .line-left {
+  width: 281px;
+  display: inline-block;
+}
+
+footer .company-info .line1 {
+  margin-top: 41px;
+}
+
+footer .copyright {
+  font-size: 12px;
+  text-align: center;
+  margin-top: 82px;
+  color: #5d5a9f;
+}
+
+.unslider {
+  overflow: hidden;
+  margin: 0;
+  padding: 0;
+}
+
+.unslider-wrap {
+  position: relative;
+}
+
+.unslider-wrap.unslider-carousel>li {
+  float: left;
+}
+
+.unslider-vertical>ul {
+  height: 100%;
+}
+
+.unslider-vertical li {
+  float: none;
+  width: 100%;
+}
+
+.unslider-fade {
+  position: relative;
+}
+
+.unslider-fade .unslider-wrap li {
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  z-index: 8;
+}
+
+.unslider-fade .unslider-wrap li.unslider-active {
+  z-index: 10;
+}
+
+.unslider li,
+.unslider ol,
+.unslider ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  border: none;
+}
+
+.unslider-arrow {
+  position: absolute;
+  left: 20px;
+  z-index: 2;
+  cursor: pointer;
+}
+
+.unslider-arrow.next {
+  left: auto;
+  right: 20px;
+}

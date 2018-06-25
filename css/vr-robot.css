@@ -1,0 +1,146 @@
+footer {
+  margin: 150px auto 0 auto;
+}
+
+.bg {
+  width: 100%;
+  position: relative;
+  background-repeat: no-repeat;
+  background-position: center top;
+}
+
+.bg1 {
+  height: 2756px;
+}
+
+.bg2 {
+  height: 1377px;
+  background-image: url(../images/images/common_bg2.jpg);
+}
+
+.illu {
+  margin-top: 1330px;
+  color: #fff;
+}
+
+.illu .intro {
+  font-size: 15px;
+  line-height: 28px;
+  letter-spacing: 3px;
+  margin: 85px 0 100px;
+  height: 55px;
+}
+
+
+.phone {
+  margin-top: 1088px;
+}
+
+.phone .intro {
+  color: #fff;
+  font-size: 15px;
+  line-height: 28px;
+  letter-spacing: 3px;
+  margin: 121px 0 75px 0;
+  height: 57px;
+}
+
+.phone .phone-video {
+  position: relative;
+  height: 613px;
+}
+
+.phone .phone-video-img {
+  position: absolute;
+  left: -160px;
+}
+
+.phone .video-box {
+  position: absolute;
+  width: 860px;
+  height: 479px;
+  left: 163px;
+  top: 44px;
+}
+
+
+/* .ai .illustrate {
+  height: 723px;
+  position: relative;
+  text-align: center;
+}
+
+.illustrate .right-text {
+  position: absolute;
+  left: 812px;
+  top: 167px;
+  letter-spacing: 4px;
+  width: 210px;
+}
+
+.illustrate .left-text {
+  position: absolute;
+  left: 193px;
+  top: 522px;
+  width: 220px;
+  letter-spacing: 4px;
+}
+
+.illustrate .cn-tt {
+  font-size: 20px;
+}
+
+.illustrate .en-tt {
+  font-size: 12px;
+  transform: scale(0.8);
+  color: #797979;
+  margin-top: 12px;
+  white-space: nowrap;
+  margin-bottom: 12px;
+}
+
+.illustrate .wtf-class {
+  text-align: left;
+  font-size: 14px;
+  letter-spacing: 4px;
+  line-height: 26px;
+} */
+
+/* .robot-wrap {
+  height: 1425px;
+  padding-top: 410px;
+  text-align: center;
+  position: relative;
+}
+
+.robot-wrap img {
+  display: inline-block;
+  display: none;
+} */
+
+/* .vr {
+  color: #fff;
+  height: 2437px;
+  padding-top: 1290px;
+}
+
+.vr .illustrate {
+  position: relative;
+}
+
+.vr .right-text {
+  text-align: center;
+  top: 274px;
+  left: 791px;
+}
+
+.vr .left-text {
+  text-align: center;
+  left: 191px;
+  top: 598px;
+}
+
+.vr .wtf-class {
+  margin-top: 20px;
+  text-indent: 20px;
+} */

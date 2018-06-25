@@ -1,0 +1,13 @@
+<div class="J_partnersSlide">
+  <ul class="partents-slide">
+    <% data.forEach(function(child) { %>
+      <li class="one-p">
+        <% child.forEach(function(it, index) { %>
+        <a target="_blank" class="J_logo logo-hover partner-logo logo<%= index+1 %>" data-url="<%= it.url %>">
+          <img class="animated" src="<%= it.logo %>">
+        </a>
+        <% }); %>
+      </li>
+    <% }); %>
+  </ul>
+</div>

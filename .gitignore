@@ -1,0 +1,21 @@
+# 此为注释 – 将被 Git 忽略
+
+# 忽略 build/ 目录下的所有文件
+/build
+/public
+/images
+
+
+# 忽略mac os系统自动生成的文件
+.DS_Store
+
+.vscode
+.idea
+
+# 忽略依赖文件夹
+node_modules
+
+# 代码覆盖率测试
+coverage
+
+yarn.lock

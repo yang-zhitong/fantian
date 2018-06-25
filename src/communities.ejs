@@ -1,0 +1,17 @@
+<ul class="thumbnails">
+  <% data.forEach(function(parent, pindex){ %>
+  <li class="one-page">
+    <% parent.forEach(function (it, index){ %>
+      <div class="figure f<%= index+1 %>">
+        <a class="figure-img" data-parentindex="<%= pindex %>" data-childindex="<%= index %>">
+          <img src="<%= it.imageF.image %>" alt="">
+        </a>
+        <p class="caption">
+          <%= it.name %>
+        </p>
+        <p class="en-caption"><%= it.english %></p>
+      </div>
+      <% }) %>
+    </li>
+    <% }) %>
+</ul>
