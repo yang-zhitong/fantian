@@ -36,7 +36,7 @@ module.exports = {
       chunks: ["news"],
       filename: "./news.html"
     }),
-    new UglifyJsPlugin(),
+    // new UglifyJsPlugin(),
   ],
   externals: {
     jquery: "window.$"
