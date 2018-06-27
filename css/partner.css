@@ -207,7 +207,7 @@
 .profile .picture {
   margin-top: 81px;
   height: 497px;
-  background: url(../images/company_intro.png) no-repeat 0 0;
+  background: url(../images/company_intro.png) no-repeat center;
   position: relative;
 }
 

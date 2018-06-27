@@ -420,10 +420,10 @@ footer .company-info .line1 {
   margin-top: 41px;
 }
 
-footer .copyright {
+.copyright {
   font-size: 12px;
   text-align: center;
-  margin-top: 32px;
+  margin-top: 12px;
   color: #5d5a9f;
 }
 
