@@ -9,8 +9,6 @@ if (!window.console) {
   };
 }
 
-const $ = require("jquery");
-
 $(".nav").on("click", ".nav-a", function(e) {
   $(this)
     .addClass("current")
@@ -31,17 +29,18 @@ $(".nav").on("click", ".nav-a", function(e) {
   }
 });
 
-let url, queryId = getParameterByName("id") || 10;
+let url, queryId = Number(window.location.pathname.split('/').pop())
 
-function getParameterByName(name, url) {
-  if (!url) url = window.location.href;
-  name = name.replace(/[\[\]]/g, "\\$&");
-  var regex = new RegExp("[?&]" + name + "(=([^&#]*)|&|#|$)"),
-    results = regex.exec(url);
-  if (!results) return null;
-  if (!results[2]) return "";
-  return decodeURIComponent(results[2].replace(/\+/g, " "));
-}
+queryId = /^\d+$/.test(queryId) ? queryId : 2;
+// function getParameterByName(name, url) {
+//   if (!url) url = window.location.href;
+//   name = name.replace(/[\[\]]/g, "\\$&");
+//   var regex = new RegExp("[?&]" + name + "(=([^&#]*)|&|#|$)"),
+//     results = regex.exec(url);
+//   if (!results) return null;
+//   if (!results[2]) return "";
+//   return decodeURIComponent(results[2].replace(/\+/g, " "));
+// }
 
 const ajaxLoad = [
   {

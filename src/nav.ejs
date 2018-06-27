@@ -1,18 +1,18 @@
-<a href="index.html" class="nav-a">
+<a href="/" class="nav-a">
   <div class="ov-box">
     <p class="cn">首页</p>
     <p class="en">HOME</p>
   </div>
 </a>
 <% menu.forEach(function(it, index) { %>
-  <a href="techs/id/<%= it.id %>.html" class="nav-a">
+  <a href="/Home/techs/index/id/<%= it.id %>" class="nav-a">
     <div class="ov-box">
       <p class="cn"><%= it.title %></p>
       <p class="en"><%= it.english %></p>
     </div>
   </a>
 <% }) %>
-<a href="news.html" class="nav-a">
+<a href="/Home/News/index/id/0" class="nav-a">
   <div class="ov-box">
     <p class="cn">公司新闻</p>
     <p class="en">news</p>

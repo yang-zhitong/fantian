@@ -9,8 +9,6 @@ if (!window.console) {
   };
 }
 
-var $ = require("jquery");
-
 function timeFormat(phpT) {
   var dateObj = new Date(phpT * 1000),
     month = dateObj.getMonth() + 1,
@@ -38,7 +36,9 @@ $(".nav").on("click", ".nav-a", function (e) {
 
 var temp = require('./src/newsDetail.ejs');
 var articles;
-var articleIndex = Number(window.location.href.split("index=")[1]) || 0;
+var articleIndex = Number(window.location.pathname.split('/').pop());
+
+articleIndex = /^\d+$/.test(articleIndex) ? articleIndex : 2;
 
 
 // $("body").on("click", "p.btn", function () {
@@ -63,8 +63,8 @@ function newsRender() {
   var len = articles.length,
     last = (articleIndex - 1 + len) % len,
     next = (articleIndex + 1 + len) % len,
-    tmpHtml = `<a href="/news/index/${last}.html" style="color: #6979c4;" class="last btn">上一篇<span class="news-name">${articles[last].title}</span></a>`;
-  tmpHtml += `<a href="/news/index/${next}.html" style="color: #6979c4;" class="next btn">下一篇<span class="news-name">${articles[next].title}</span></a>`;
+    tmpHtml = `<a href="/Home/News/index/id/${last}" style="color: #6979c4;" class="last btn">上一篇<span class="news-name">${articles[last].title}</span></a>`;
+  tmpHtml += `<a href="/Home/News/index/id/${next}" style="color: #6979c4;" class="next btn">下一篇<span class="news-name">${articles[next].title}</span></a>`;
   $(".J_pageBox").html(tmpHtml);
 }
 
